@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Cairo";
+  src: url("Cairo.ttf");
+}
+* {
+  font-family: "Cairo";
+}
