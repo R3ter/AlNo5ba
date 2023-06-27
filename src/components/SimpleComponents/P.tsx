@@ -1,6 +1,7 @@
 interface IProps {
   children?: string;
+  style?: React.CSSProperties;
 }
-export default ({ children }: IProps) => {
-  return <p style={{ textAlign: "right" }}>{children}</p>;
+export default ({ children, style = {} }: IProps) => {
+  return <p style={{ textAlign: "right", ...style }}>{children}</p>;
 };
