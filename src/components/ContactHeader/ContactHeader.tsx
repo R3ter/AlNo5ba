@@ -3,8 +3,8 @@ import "./style.scss";
 import { TfiEmail, TfiMobile } from "react-icons/tfi";
 import { FaRegUser } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdOutlineLanguage } from "react-icons/md";
-import RegistrationPopUs from "../PopUp/ResistrationPopUp/RegistrationPopUs";
 import { useRef } from "react";
+import SignInPopUp from "../PopUp/SignInPopUp/SignInPopUp";
 export default () => {
   const onRegiClick = useRef((bool: boolean) => {});
   return (
@@ -70,7 +70,7 @@ export default () => {
           </span>
           <FaRegUser style={{ alignSelf: "center", fontSize: "20px" }} />
         </div>
-        <RegistrationPopUs setShow={onRegiClick} />
+        <SignInPopUp setShow={onRegiClick} />
       </div>
       <div
         style={{
