@@ -1,14 +1,20 @@
 import { BsFillTelephoneFill } from "react-icons/bs";
 import P from "../../../components/SimpleComponents/P";
+import { MdEmail } from "react-icons/md";
+import { IoLocationSharp } from "react-icons/io5";
 
 export default () => {
   return (
     <div
       style={{
+        flex: 1,
         backgroundColor: "#f2f7f7",
         float: "right",
         padding: "30px",
         width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        gap: 50,
       }}
     >
       <div>
@@ -21,8 +27,8 @@ export default () => {
       </div>
       <div>
         <TextWithIcon
-          Icon={BsFillTelephoneFill}
-          title="هاتف"
+          Icon={MdEmail}
+          title="البريد الالكتروني"
           style={{ justifyContent: "right", color: "#420b73" }}
         />
         <P style={{ marginRight: "50px", marginTop: "-20px" }}>
@@ -31,8 +37,8 @@ export default () => {
       </div>
       <div>
         <TextWithIcon
-          Icon={BsFillTelephoneFill}
-          title="هاتف"
+          Icon={IoLocationSharp}
+          title="العنوان"
           style={{ justifyContent: "right", color: "#420b73" }}
         />
         <P style={{ marginRight: "50px", marginTop: "-20px" }}>
@@ -61,6 +67,7 @@ const TextWithIcon = ({ Icon, title, style = {} }: IProps) => {
 
       <Icon
         style={{
+          fontSize: "22px",
           alignSelf: "center",
           transform: "scaleX(-1)",
         }}

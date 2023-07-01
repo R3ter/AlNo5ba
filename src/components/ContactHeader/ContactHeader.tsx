@@ -3,7 +3,10 @@ import "./style.scss";
 import { TfiEmail, TfiMobile } from "react-icons/tfi";
 import { FaRegUser } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdOutlineLanguage } from "react-icons/md";
+import RegistrationPopUs from "../PopUp/ResistrationPopUp/RegistrationPopUs";
+import { useRef } from "react";
 export default () => {
+  const onRegiClick = useRef((bool: boolean) => {});
   return (
     <div className="ContactHeader">
       <div
@@ -46,7 +49,11 @@ export default () => {
           }}
         />
         <div
+          onClick={() => {
+            onRegiClick.current(true);
+          }}
           style={{
+            cursor: "pointer",
             alignSelf: "center",
             width: "220px",
             display: "flex",
@@ -63,6 +70,7 @@ export default () => {
           </span>
           <FaRegUser style={{ alignSelf: "center", fontSize: "20px" }} />
         </div>
+        <RegistrationPopUs setShow={onRegiClick} />
       </div>
       <div
         style={{
