@@ -6,7 +6,9 @@ import { MdKeyboardArrowDown, MdOutlineLanguage } from "react-icons/md";
 import { useRef } from "react";
 import SignInPopUp from "../PopUp/SignInPopUp/SignInPopUp";
 export default () => {
-  const onRegiClick = useRef((bool: boolean) => {});
+  const onRegiClick = useRef((bool: boolean) => {
+    return bool;
+  });
   return (
     <div className="ContactHeader">
       <div className="loginLang">

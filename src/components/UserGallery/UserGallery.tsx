@@ -1,14 +1,14 @@
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import "./style.scss";
 export default () => {
-  const images = [
-    "https://mui.com/static/images/avatar/1.jpg",
-    "https://mui.com/static/images/avatar/2.jpg",
-    "https://mui.com/static/images/avatar/3.jpg",
-    "https://mui.com/static/images/avatar/4.jpg",
-    "https://mui.com/static/images/avatar/5.jpg",
-    "https://mui.com/static/images/avatar/6.jpg",
-  ];
+  // const images = [
+  //   "https://mui.com/static/images/avatar/1.jpg",
+  //   "https://mui.com/static/images/avatar/2.jpg",
+  //   "https://mui.com/static/images/avatar/3.jpg",
+  //   "https://mui.com/static/images/avatar/4.jpg",
+  //   "https://mui.com/static/images/avatar/5.jpg",
+  //   "https://mui.com/static/images/avatar/6.jpg",
+  // ];
 
   return (
     <div
