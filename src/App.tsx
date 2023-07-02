@@ -5,6 +5,7 @@ import CoursePage from "./pages/CoursePage/CoursePage";
 import CoursesPage from "./pages/CoursesPage/CoursesPage";
 import HomePage from "./pages/HomePage/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/course",
     element: <CoursePage />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
   },
 ]);
 

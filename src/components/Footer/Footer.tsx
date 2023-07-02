@@ -36,22 +36,42 @@ export default () => {
           </div>
           <div className="column">
             <h3 style={{ textAlign: "center" }}>تواصل معنا</h3>
-            <div style={{ display: "flex" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+              }}
+            >
               <BsFillTelephoneFill
-                style={{ alignSelf: "center", margin: "0px", fontSize: "18px" }}
+                style={{
+                  fontSize: "18px",
+                  padding: "7px",
+                  transform: "scaleX(-1)",
+                }}
               />
               <p>054215425845</p>
             </div>
-            <div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+              }}
+            >
               <MdEmail
-                style={{ alignSelf: "center", margin: "0px", fontSize: "18px" }}
+                style={{
+                  fontSize: "18px",
+                  padding: "7px",
+                }}
               />
               <p>email@gwad.com</p>
             </div>
-            <div>
-              <HiLocationMarker
-                style={{ alignSelf: "center", fontSize: "18px" }}
-              />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+              }}
+            >
+              <HiLocationMarker style={{ fontSize: "18px", padding: "7px" }} />
               <p>Jerusalem - awd </p>
             </div>
           </div>

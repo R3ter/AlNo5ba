@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+import "./style.scss";
 export default () => {
   return (
     <div
+      className="heroMenu"
       style={{
         display: "flex",
         justifyContent: "space-between",
@@ -9,10 +12,18 @@ export default () => {
         fontSize: "20px",
       }}
     >
-      <div>اشترك الان</div>
-      <div>الخدمات</div>
-      <div>من نحن</div>
-      <div>الرئيسية</div>
+      <Link to={"/register"}>
+        <div>اشترك الان</div>
+      </Link>
+      <Link to={"/courses"}>
+        <div>الخدمات</div>
+      </Link>
+      <Link to={"/aboutUs"}>
+        <div>من نحن</div>
+      </Link>
+      <Link to={"/"}>
+        <div>الرئيسية</div>
+      </Link>
     </div>
   );
 };
