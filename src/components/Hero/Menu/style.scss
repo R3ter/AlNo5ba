@@ -3,4 +3,12 @@
     color: white;
     text-decoration: none;
   }
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: 40px;
+  font-size: 20px;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+  }
 }

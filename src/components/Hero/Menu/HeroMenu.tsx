@@ -2,16 +2,7 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 export default () => {
   return (
-    <div
-      className="heroMenu"
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        width: "40%",
-        margin: "40px",
-        fontSize: "20px",
-      }}
-    >
+    <div className="heroMenu">
       <Link to={"/register"}>
         <div>اشترك الان</div>
       </Link>

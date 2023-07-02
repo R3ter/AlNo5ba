@@ -13,7 +13,7 @@ export default ({ content, size }: IProps) => {
       className="Hero"
       style={{ height: size == "main" ? "600px" : "350px" }}
     >
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div className="HeroMenu">
         <HeroMenu />
         <Logo />
       </div>

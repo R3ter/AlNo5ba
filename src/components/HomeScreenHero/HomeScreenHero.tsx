@@ -1,16 +1,10 @@
 import { Link } from "react-router-dom";
 import MainButton from "../MainButton/MainButton";
 import image from "./../../assets/HomePage.png";
+import "./style.scss";
 export default () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        marginLeft: "10vw",
-        marginRight: "10vw",
-      }}
-    >
+    <div className="HomeScreenHero">
       <div>
         <img
           style={{
@@ -20,7 +14,7 @@ export default () => {
           alt=""
         />
       </div>
-      <div style={{ marginTop: "100px" }}>
+      <div className="text">
         <h2 style={{ textAlign: "right" }}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste,
           dolorum. Sed asperiores inventore

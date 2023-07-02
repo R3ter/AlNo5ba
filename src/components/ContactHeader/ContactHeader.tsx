@@ -9,21 +9,8 @@ export default () => {
   const onRegiClick = useRef((bool: boolean) => {});
   return (
     <div className="ContactHeader">
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "400px",
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{
-            width: "140px",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+      <div className="loginLang">
+        <div className="lang">
           <MdKeyboardArrowDown
             style={{
               alignSelf: "center",
@@ -55,7 +42,7 @@ export default () => {
           style={{
             cursor: "pointer",
             alignSelf: "center",
-            width: "220px",
+            // width: "220px",
             display: "flex",
             justifyContent: "space-between",
           }}
@@ -72,15 +59,7 @@ export default () => {
         </div>
         <SignInPopUp setShow={onRegiClick} />
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "300px",
-          textAlign: "center",
-          marginRight: "30px",
-        }}
-      >
+      <div className="contactInfo">
         <div
           style={{
             alignSelf: "center",

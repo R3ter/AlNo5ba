@@ -13,6 +13,7 @@ export default ({ text, onClick, style, full = false }: IProps) => {
         onClick={onClick ? onClick : () => {}}
         style={{
           padding: "10px",
+          whiteSpace: "nowrap",
           fontSize: "18px",
           paddingRight: "70px",
           cursor: "pointer",

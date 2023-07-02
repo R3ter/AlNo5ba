@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import CoursePage from "./pages/CoursePage/CoursePage";
@@ -36,9 +36,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <>
+    <div id="app">
       <RouterProvider router={router} />
-    </>
+    </div>
   );
 }
 

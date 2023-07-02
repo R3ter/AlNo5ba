@@ -1,7 +1,8 @@
 import logo from "./../../assets/logo-white.png";
+import "./style.scss";
 export default () => {
   return (
-    <div style={{ margin: "60px", marginTop: "20px", overflow: "hidden" }}>
+    <div className="logo">
       <img src={logo} />
     </div>
   );
