@@ -6,13 +6,7 @@ export default () => {
   return (
     <div className="HomeScreenHero">
       <div>
-        <img
-          style={{
-            height: "100%",
-          }}
-          src={image}
-          alt=""
-        />
+        <img src={image} alt="" />
       </div>
       <div className="text">
         <h2 style={{ textAlign: "right" }}>

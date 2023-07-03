@@ -1,10 +1,11 @@
 interface IProps {
   text: string;
 }
+import "./style.scss";
 export default ({ text }: IProps) => {
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1>{text}</h1>
+    <div className="heroTitle">
+      <h1 style={{ alignSelf: "center" }}>{text}</h1>
     </div>
   );
 };

@@ -43,8 +43,8 @@ export default () => {
               }}
             >
               <BsFillTelephoneFill
+                className="footerIcon"
                 style={{
-                  fontSize: "18px",
                   padding: "7px",
                   transform: "scaleX(-1)",
                 }}
@@ -58,8 +58,8 @@ export default () => {
               }}
             >
               <MdEmail
+                className="footerIcon"
                 style={{
-                  fontSize: "18px",
                   padding: "7px",
                 }}
               />
@@ -71,7 +71,10 @@ export default () => {
                 justifyContent: "space-around",
               }}
             >
-              <HiLocationMarker style={{ fontSize: "18px", padding: "7px" }} />
+              <HiLocationMarker
+                className="footerIcon"
+                style={{ padding: "7px" }}
+              />
               <p>Jerusalem - awd </p>
             </div>
           </div>

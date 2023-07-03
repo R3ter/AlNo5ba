@@ -1,0 +1,22 @@
+.userGallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 30;
+  margin: auto;
+  margin-top: 50px;
+  max-width: 1000px;
+  @media only screen and (max-width: 900px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .avatar {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+    @media only screen and (max-width: 900px) {
+      width: 16vw;
+      height: 16vw;
+    }
+  }
+}

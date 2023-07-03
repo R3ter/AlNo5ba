@@ -11,7 +11,7 @@ export default ({ content, size }: IProps) => {
   return (
     <div
       className="Hero"
-      style={{ height: size == "main" ? "600px" : "350px" }}
+      style={{ height: size == "main" ? "800px" : "350px" }}
     >
       <div className="HeroMenu">
         <HeroMenu />

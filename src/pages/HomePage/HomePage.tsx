@@ -7,7 +7,7 @@ import StudentsReviews from "../../components/StudentsReviews/StudentsReviews";
 
 export default () => {
   return (
-    <div style={{ width: "fit-content" }}>
+    <div>
       <Header size="main" headerContent={<HomeScreenHero />} />
       <Numbers />
       <StudentsReviews />

@@ -11,17 +11,7 @@ export default () => {
   // ];
 
   return (
-    <div
-      className="slider"
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        gap: 30,
-        margin: "auto",
-        marginTop: "50px",
-        maxWidth: "1000px",
-      }}
-    >
+    <div className="userGallery">
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div style={{ alignSelf: "center", display: "flex" }}>
           <MdKeyboardArrowLeft
@@ -69,12 +59,9 @@ interface IAvatar {
 const Avatar = ({ src, style = {} }: IAvatar) => {
   return (
     <img
+      className="avatar"
       src={src}
       style={{
-        borderRadius: "50%",
-        width: "70px",
-        height: "70px",
-        margin: "20px",
         ...style,
       }}
     />

@@ -48,7 +48,7 @@ export default ({
       ></div>
       <div
         style={{
-          top: 250,
+          top: 50,
           position: "relative",
           width: "100%",
           maxWidth: "600px",

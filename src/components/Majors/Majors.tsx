@@ -11,10 +11,17 @@ export default () => {
       }}
     >
       <h1 style={{ color: "#3b4e82", marginBottom: "0" }}>Majors</h1>
-      <h2 style={{ color: "#583284", marginTop: "0" }}>
+      <h2 style={{ color: "#583284", margin: "5px", marginTop: "0" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </h2>
-      <div style={{ display: "flex", justifyContent: "center", gap: 50 }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: 50,
+          flexWrap: "wrap",
+        }}
+      >
         <MajorCard
           desc="Lorem ipsum dolor sit amet consectetur adipisic"
           title="التخصص الاول"

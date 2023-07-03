@@ -1,0 +1,44 @@
+.courses {
+  display: flex;
+  justify-content: center;
+  .coursesDiv {
+    max-width: 1600px;
+    margin-bottom: 600px;
+    margin: 30px;
+    @media only screen and (max-width: 900px) {
+      margin: 10px;
+      h1:first-of-type {
+        font-size: 1.2rem;
+      }
+    }
+    .courseCard {
+      display: flex;
+      cursor: pointer;
+
+      div {
+        margin-right: 2rem;
+        align-self: center;
+      }
+      img {
+        border-radius: 5px;
+        align-self: center;
+        width: 500px;
+        height: 200px;
+      }
+      @media only screen and (max-width: 900px) {
+        font-size: 0.6rem;
+        img {
+          width: 200px;
+          height: 150px;
+        }
+      }
+    }
+    h1 {
+      text-align: right;
+      color: #293974;
+      @media only screen and (max-width: 900px) {
+        text-align: center;
+      }
+    }
+  }
+}

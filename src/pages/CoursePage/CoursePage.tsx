@@ -21,7 +21,7 @@ export default () => {
           style={{
             display: "flex",
             gap: 100,
-            margin: "50px",
+            margin: "1rem",
             maxWidth: "1500px",
           }}
         >

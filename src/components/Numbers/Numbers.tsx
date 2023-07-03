@@ -1,14 +1,8 @@
 import img4 from "./../../assets/img4.png";
+import "./style.scss";
 export default () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        marginTop: "70px",
-        marginBottom: "70px",
-      }}
-    >
+    <div className="numbers">
       <img
         src={img4}
         style={{ position: "absolute", zIndex: -10, left: -50 }}
@@ -35,9 +29,9 @@ interface INumberWithText {
 }
 const NumberWithText = ({ text, number }: INumberWithText) => {
   return (
-    <div style={{ color: "#273572" }}>
-      <h2 style={{ marginBottom: 0, fontSize: "40px" }}>{number}+</h2>
-      <p style={{ marginTop: -20 }}>{text}</p>
+    <div className="numberWithText">
+      <h2>{number}+</h2>
+      <p>{text}</p>
     </div>
   );
 };

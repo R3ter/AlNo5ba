@@ -1,18 +1,8 @@
+import "./style.scss";
 export default () => {
   return (
-    <div
-      style={{
-        margin: "30px",
-        justifyContent: "center",
-        display: "flex",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          maxWidth: "2000px",
-        }}
-      >
+    <div className="facts">
+      <div className="factsDiv">
         <div style={{ flex: 0.8, margin: "5px", marginRight: "20px" }}>
           <img
             style={{ height: "95%", width: "100%", borderRadius: "10px" }}

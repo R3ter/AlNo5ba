@@ -1,0 +1,8 @@
+.heroTitle {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  @media only screen and (max-width: 900px) {
+    margin-top: 40px;
+  }
+}

@@ -1,25 +1,12 @@
 import MainButton from "../MainButton/MainButton";
-
+import H1 from "../SimpleComponents/H1";
+import "./style.scss";
 export default () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        marginTop: "50px",
-      }}
-    >
-      <div
-        style={{
-          gap: 50,
-          display: "flex",
-          maxWidth: "1500px",
-          marginRight: "50px",
-          marginLeft: "50px",
-        }}
-      >
-        <div style={{ flexDirection: "column", textAlign: "right" }}>
-          <h1 style={{ color: "#273572" }}>من نحن</h1>
+    <div className="whoAreWe">
+      <div className="galleryWho">
+        <div className="text">
+          <H1>من نحن</H1>
           <h2 style={{ color: "#273572" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             dolor unde
@@ -40,33 +27,20 @@ export default () => {
           </p>
           <MainButton text={"اشترك الان"} />
         </div>
-        <div style={{ display: "flex", gap: 30 }}>
-          <div style={{ display: "flex", gap: 30, flexDirection: "column" }}>
+        <div className="images">
+          <div className="imageGroup">
             <img
-              style={{ height: "240px", width: "230px" }}
+              style={{ marginBottom: "20px", marginTop: "20px" }}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxELxHjXiVKfNX5i6fHyJV7UPRRggj0SvaV42qt6KtqaHvkcW3"
             />
-            <img
-              style={{ height: "240px", width: "230px" }}
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxELxHjXiVKfNX5i6fHyJV7UPRRggj0SvaV42qt6KtqaHvkcW3"
-            />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxELxHjXiVKfNX5i6fHyJV7UPRRggj0SvaV42qt6KtqaHvkcW3" />
           </div>
-          <div
-            style={{
-              marginTop: "20px",
-              display: "flex",
-              gap: 30,
-              flexDirection: "column",
-            }}
-          >
+          <div className="imageGroup">
             <img
-              style={{ height: "240px", width: "230px" }}
+              style={{ marginBottom: "20px", marginTop: "10px" }}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxELxHjXiVKfNX5i6fHyJV7UPRRggj0SvaV42qt6KtqaHvkcW3"
             />
-            <img
-              style={{ height: "240px", width: "230px" }}
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxELxHjXiVKfNX5i6fHyJV7UPRRggj0SvaV42qt6KtqaHvkcW3"
-            />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxELxHjXiVKfNX5i6fHyJV7UPRRggj0SvaV42qt6KtqaHvkcW3" />
           </div>
         </div>
       </div>

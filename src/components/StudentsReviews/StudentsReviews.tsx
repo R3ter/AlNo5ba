@@ -1,16 +1,8 @@
 import UserGallery from "../UserGallery/UserGallery";
-
+import "./style.scss";
 export default () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        marginTop: "100px",
-        textAlign: "center",
-      }}
-    >
+    <div className="studentsReviews">
       <h2 style={{ color: "#273572" }}>اراء الطلاب</h2>
       <div>
         <p>

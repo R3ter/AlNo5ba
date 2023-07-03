@@ -8,10 +8,17 @@ import StudentsReviews from "../../components/StudentsReviews/StudentsReviews";
 export default () => {
   return (
     <div>
-      <Header size="secondary" headerContent={<HeroTitle text="Register" />} />
+      <Header size="secondary" headerContent={<HeroTitle text="تسجيل" />} />
       <StudentsReviews />
-      <div style={{ marginBottom: "100px" }}>
-        <div style={{ maxWidth: "1000px", margin: "auto" }}>
+      <div
+        style={{
+          marginBottom: "100px",
+          display: "flex",
+          justifyContent: "center",
+          width: "100%",
+        }}
+      >
+        <div style={{ maxWidth: "1000px", margin: "20px", width: "100%" }}>
           <RegistrationForm />
           <div style={{ display: "flex", justifyContent: "center" }}>
             <MainButton

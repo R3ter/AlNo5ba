@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import H1 from "../SimpleComponents/H1";
 import P from "../SimpleComponents/P";
-
+import "./style.scss";
 export default () => {
   const courses = [
     {
@@ -23,27 +24,21 @@ export default () => {
     },
   ];
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <div style={{ maxWidth: "1000px", marginBottom: "100px" }}>
-        <H1>الكورسات</H1>
+    <div className="courses">
+      <div className="coursesDiv">
+        <h1>الكورسات</h1>
         <div style={{ gap: 60, display: "flex", flexDirection: "column" }}>
           {courses.map(({ name, image, description }) => {
             return (
-              <div style={{ display: "flex", gap: 60 }}>
-                <div>
-                  <H1>{name}</H1>
-                  <P>{description}</P>
+              <Link to={"/course"}>
+                <div className="courseCard">
+                  <div>
+                    <H1>{name}</H1>
+                    <P>{description}</P>
+                  </div>
+                  <img src={image} alt="" />
                 </div>
-                <img
-                  style={{
-                    borderRadius: "5px",
-                    width: "500px",
-                    height: "200px",
-                  }}
-                  src={image}
-                  alt=""
-                />
-              </div>
+              </Link>
             );
           })}
         </div>
