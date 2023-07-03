@@ -6,10 +6,10 @@ import HeroTitle from "../../components/Hero/HeroTitle/HeroTitle";
 import H1 from "../../components/SimpleComponents/H1";
 import P from "../../components/SimpleComponents/P";
 import UserGallery from "../../components/UserGallery/UserGallery";
-
+import "./style.scss";
 export default () => {
   return (
-    <div>
+    <div className="coursePage">
       <Header size="secondary" headerContent={<HeroTitle text="كورس" />} />
       <div
         style={{
@@ -17,14 +17,7 @@ export default () => {
           justifyContent: "center",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            gap: 100,
-            margin: "1rem",
-            maxWidth: "1500px",
-          }}
-        >
+        <div className="courseInfo">
           <div>
             <H1>اسم الكورس</H1>
             <P>
@@ -50,14 +43,14 @@ export default () => {
               nulla quia repellat temporibus harum illum, quibusdam ab Nostrum?
             </P>
           </div>
-          <div style={{ alignSelf: "center" }}>
+          <div className="courseGallery">
             <CourseGallery />
           </div>
         </div>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div style={{ maxWidth: "1200px" }}>
-          <H1>الشهدات</H1>
+          <h1>الشهدات</h1>
           <P>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
             minus expedita, eos totam adipisci quam nisi, architecto tenetur non
