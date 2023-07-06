@@ -3,6 +3,7 @@ import "./style.scss";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
 import Copyright from "../Copyright/Copyright";
+import { Link } from "react-router-dom";
 export default () => {
   return (
     <div>
@@ -32,7 +33,9 @@ export default () => {
             <p>العقود والشركة</p>
             <p>سياسات المسخدم</p>
             <p>الاسئلة الشائعة</p>
-            <p>اتصل بنا</p>
+            <Link to={"/contactUs"}>
+              <p>اتصل بنا</p>
+            </Link>
           </div>
           <div className="column">
             <h3 style={{ textAlign: "center" }}>تواصل معنا</h3>

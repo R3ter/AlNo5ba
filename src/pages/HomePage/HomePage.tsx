@@ -6,6 +6,7 @@ import Numbers from "../../components/Numbers/Numbers";
 import StudentsReviews from "../../components/StudentsReviews/StudentsReviews";
 
 export default () => {
+
   return (
     <div>
       <Header size="main" headerContent={<HomeScreenHero />} />

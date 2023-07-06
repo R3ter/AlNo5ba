@@ -9,9 +9,7 @@ export default () => {
       style={{
         flex: 1,
         backgroundColor: "#f2f7f7",
-        float: "right",
         padding: "30px",
-        width: "100%",
         display: "flex",
         flexDirection: "column",
         gap: 50,

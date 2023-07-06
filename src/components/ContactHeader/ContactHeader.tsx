@@ -5,7 +5,7 @@ import { FaRegUser } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdOutlineLanguage } from "react-icons/md";
 import { useRef } from "react";
 import SignInPopUp from "../PopUp/SignInPopUp/SignInPopUp";
-export default () => {
+export default function ContactHeader() {
   const onRegiClick = useRef((bool: boolean) => {
     return bool;
   });
@@ -105,4 +105,4 @@ export default () => {
       </div>
     </div>
   );
-};
+}

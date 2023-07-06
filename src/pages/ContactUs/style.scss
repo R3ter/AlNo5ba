@@ -1,0 +1,9 @@
+.contactUs {
+  @media only screen and (max-width: 900px) {
+    font-size: 0.7rem;
+    flex-direction: column;
+    .contactContents {
+      flex-direction: column;
+    }
+  }
+}

@@ -6,10 +6,18 @@ import P from "../../components/SimpleComponents/P";
 import ContactForm from "./ContactComponents/ContactForm";
 import ContactInfo from "./ContactComponents/ContactInfo";
 import GoogleMaps from "../../components/GoogleMaps/GoogleMaps";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import "./style.scss";
 
-export default () => {
+export default function ContactUs() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <div>
+    <div className="contactUs">
       <Header size="secondary" headerContent={<HeroTitle text="اتصل بنا" />} />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div style={{ float: "right", margin: "50px", maxWidth: "1500px" }}>
@@ -27,6 +35,7 @@ export default () => {
               marginBottom: "50px",
               gap: 50,
             }}
+            className="contactContents"
           >
             <ContactForm />
             <ContactInfo />
@@ -37,4 +46,4 @@ export default () => {
       <Footer />
     </div>
   );
-};
+}
