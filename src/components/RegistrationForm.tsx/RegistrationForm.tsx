@@ -1,13 +1,74 @@
+import isEmail from "validator/lib/isEmail";
 import MainField from "../Feild/MainField";
 
-export default () => {
+interface IFormValue {
+  [key: string]: string;
+}
+interface IError {
+  email: string;
+  password: string;
+}
+
+export default ({
+  formValue,
+  error,
+}: {
+  formValue?: IFormValue;
+  error?: IError;
+}) => {
   return (
     <div>
-      <MainField text="البريد الالكتروني" type="email" />
-      <MainField text="الاسم" type="text" />
+      <MainField
+        keyForm="email"
+        value={formValue}
+        text="البريد الالكتروني"
+        type="email"
+        errorMsg="البريد الالكتروني غير صحيح"
+        validate={(input) => {
+          return isEmail(input);
+        }}
+      />
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "space-between",
+          gap: "30px",
+        }}
+      >
+        <MainField
+          text="الاسم الاخير"
+          validate={(e) => {
+            return e.length > 3 && e.length < 40;
+          }}
+          errorMsg="يجب ان يتكون من 3 احرف على الاقل"
+          type="text"
+        />
+        <MainField
+          text="الاسم الاول"
+          validate={(e) => {
+            return e.length > 3 && e.length < 40;
+          }}
+          errorMsg="يجب ان يتكون من 3 احرف على الاقل"
+          type="text"
+        />
+      </div>
       <MainField text="رقم الهاتف" type="number" />
-      <MainField text="كلمة المرور" type="password" />
-      <MainField text="تاكيد كلمة المرور" type="password" />
+      <MainField
+        keyForm="password"
+        value={formValue}
+        text="كلمة المرور"
+        type="password"
+      />
+      <MainField
+        validate={(e) => {
+          return e === formValue?.password;
+        }}
+        pushErrorMsg={error?.password}
+        errorMsg="كلمة السر غير مطابقة"
+        text="تاكيد كلمة المرور"
+        type="password"
+      />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { FaRegUser } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdOutlineLanguage } from "react-icons/md";
 import { useRef } from "react";
 import SignInPopUp from "../PopUp/SignInPopUp/SignInPopUp";
+import { Link } from "react-router-dom";
 export default function ContactHeader() {
   const onRegiClick = useRef((bool: boolean) => {
     return bool;
@@ -61,48 +62,50 @@ export default function ContactHeader() {
         </div>
         <SignInPopUp setShow={onRegiClick} />
       </div>
-      <div className="contactInfo">
-        <div
-          style={{
-            alignSelf: "center",
-            width: "140px",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <span
+      <Link to="/contactus">
+        <div className="contactInfo">
+          <div
             style={{
               alignSelf: "center",
+              width: "140px",
+              display: "flex",
+              justifyContent: "space-between",
             }}
           >
-            walled@wda.com
-          </span>
-        </div>
-        <TfiEmail style={{ alignSelf: "center" }} />
-        <hr
-          style={{
-            height: "25px",
-            alignSelf: "center",
-          }}
-        />
-        <div
-          style={{
-            alignSelf: "center",
-            width: "100px",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <span
+            <span
+              style={{
+                alignSelf: "center",
+              }}
+            >
+              walled@wda.com
+            </span>
+          </div>
+          <TfiEmail style={{ alignSelf: "center" }} />
+          <hr
             style={{
+              height: "25px",
               alignSelf: "center",
             }}
+          />
+          <div
+            style={{
+              alignSelf: "center",
+              width: "100px",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
           >
-            0524512545
-          </span>
+            <span
+              style={{
+                alignSelf: "center",
+              }}
+            >
+              0524512545
+            </span>
+          </div>
+          <TfiMobile style={{ alignSelf: "center", fontSize: "20px" }} />
         </div>
-        <TfiMobile style={{ alignSelf: "center", fontSize: "20px" }} />
-      </div>
+      </Link>
     </div>
   );
 }

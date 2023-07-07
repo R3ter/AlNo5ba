@@ -21,15 +21,23 @@ export default () => {
           </div>
           <div className="column">
             <h3>لنكات تهمك</h3>
-            <p>الرئيسية</p>
-            <p>من نحن</p>
-            <p>الخدمات </p>
+            <Link to={"/"}>
+              <p>الرئيسية</p>
+            </Link>
+            <Link to={"/aboutus"}>
+              <p>من نحن</p>
+            </Link>
+            <Link to={"/courses"}>
+              <p>الخدمات </p>
+            </Link>
           </div>
           <div className="column">
             <h3>
               <br></br>
             </h3>
-            <p>اشهادات</p>
+            <Link to={"/aboutus"}>
+              <p>اشهادات</p>
+            </Link>
             <p>العقود والشركة</p>
             <p>سياسات المسخدم</p>
             <p>الاسئلة الشائعة</p>

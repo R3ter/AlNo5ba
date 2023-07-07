@@ -1,17 +1,16 @@
 import { useState } from "react";
-import MainButton from "../MainButton/MainButton";
 
 export default ({
   form,
   title,
-  submitText,
+  submitButton,
   extra,
   setShow,
 }: {
-  submitText: string;
   form: React.ReactNode;
   title: string;
   extra?: React.ReactNode;
+  submitButton: React.ReactNode;
   setShow: any;
 }) => {
   const [show, setShown] = useState(false);
@@ -62,7 +61,7 @@ export default ({
         <h2 style={{ textAlign: "center", margin: "0px" }}>{title}</h2>
         {form}
         <br></br>
-        <MainButton full text={submitText} />
+        {submitButton}
         {extra}
       </div>
     </div>

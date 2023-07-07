@@ -38,6 +38,7 @@ export default () => {
                   </div>
                   <img src={image} alt="" />
                 </div>
+                <hr />
               </Link>
             );
           })}

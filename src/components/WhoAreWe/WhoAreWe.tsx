@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MainButton from "../MainButton/MainButton";
 import H1 from "../SimpleComponents/H1";
 import "./style.scss";
@@ -25,7 +26,9 @@ export default () => {
             cupiditate quod tenetur ratione a aspernatur quidem suscipit. Totam!
             Debitis saepe
           </p>
-          <MainButton text={"اشترك الان"} />
+          <Link to={"/register"}>
+            <MainButton text={"اشترك الان"} />
+          </Link>
         </div>
         <div className="images">
           <div className="imageGroup">
