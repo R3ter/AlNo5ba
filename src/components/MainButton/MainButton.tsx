@@ -10,9 +10,7 @@ interface IProps {
 }
 export default ({ text, onClick, style, full = false }: IProps) => {
   const [isLoading, setLoading] = useState(false);
-  const setLoaing = (bool: boolean) => {
-    setLoading(bool);
-  };
+
   return (
     <div>
       <button

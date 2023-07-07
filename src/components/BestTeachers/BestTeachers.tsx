@@ -107,7 +107,7 @@ export default () => {
           </div>
         </div>
         <div style={{ display: "flex", gap: 50, flex: 0.8 }}>
-          {teachers.slice(0, 3).map(({ image, name, studentsNum }, index) => (
+          {teachers.slice(0, 3).map(({ image, name, studentsNum }) => (
             <TeacherCard image={image} name={name} studentsNum={studentsNum} />
           ))}
         </div>
