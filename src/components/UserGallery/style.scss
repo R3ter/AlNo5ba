@@ -8,17 +8,18 @@
   @media only screen and (max-width: 900px) {
     justify-content: center;
     flex-wrap: wrap;
+    width: 100vw;
   }
+
   .avatar {
     border-radius: 50%;
-    width: fit-content;
-    height: 65px;
-    margin: 15px;
+    // width: fit-content;
+    height: 40%;
+    align-self: center;
+    margin: 10px;
     transition: 300ms;
 
     @media only screen and (max-width: 900px) {
-      // width: 16vw;
-      // height: 16vw;
     }
   }
 }

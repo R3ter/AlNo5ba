@@ -62,7 +62,7 @@ export default function ContactHeader() {
         </div>
         <SignInPopUp setShow={onRegiClick} />
       </div>
-      <Link to="/contactus">
+      <Link to="contactus">
         <div className="contactInfo">
           <div
             style={{

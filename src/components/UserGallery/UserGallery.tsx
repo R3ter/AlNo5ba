@@ -84,11 +84,6 @@ export default () => {
             ) : (
               <Avatar
                 style={{
-                  width: "fit-content",
-                  height: "65px",
-                  margin: "15px",
-                  alignSelf: "center",
-                  justifyContent: "center",
                   transform: index == num[1] ? "scale(1.4)" : "",
                 }}
                 src={image}

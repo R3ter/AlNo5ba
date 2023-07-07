@@ -16,6 +16,7 @@
       display: none;
     }
   }
+
   .loginLang {
     display: flex;
     justify-content: space-between;
@@ -23,7 +24,9 @@
     text-align: center;
 
     @media only screen and (max-width: 900px) {
-      // width: 100%;
+      span {
+        font-size: 0.5rem;
+      }
     }
     .lang {
       width: 140px;
