@@ -1,22 +1,18 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { PopupContext } from "../Context/PopUpContext";
 
 export default ({
   form,
   title,
   submitButton,
   extra,
-  setShow,
 }: {
   form: React.ReactNode;
   title: string;
   extra?: React.ReactNode;
   submitButton: React.ReactNode;
-  setShow: any;
 }) => {
-  const [show, setShown] = useState(false);
-  setShow.current = (bool: boolean) => {
-    setShown(bool);
-  };
+  const { closePopup } = useContext(PopupContext);
   return (
     <div
       style={{
@@ -28,13 +24,13 @@ export default ({
         right: 0,
         bottom: 0,
         width: "100%",
-        display: show ? "flex" : "none",
+        display: "flex",
         justifyContent: "center",
       }}
     >
       <div
         onClick={() => {
-          setShown(false);
+          closePopup();
         }}
         style={{
           backgroundColor: "black",

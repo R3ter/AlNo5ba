@@ -2,32 +2,33 @@ import "./style.scss";
 
 import { TfiEmail, TfiMobile } from "react-icons/tfi";
 import { FaRegUser } from "react-icons/fa";
-import { MdKeyboardArrowDown, MdOutlineLanguage } from "react-icons/md";
-import { useRef } from "react";
+import { MdOutlineLanguage } from "react-icons/md";
+import { useContext } from "react";
 import SignInPopUp from "../PopUp/SignInPopUp/SignInPopUp";
 import { Link } from "react-router-dom";
+import SelectLang from "./SelectLang";
+import { PopupContext } from "../Context/PopUpContext";
 export default function ContactHeader() {
-  const onRegiClick = useRef((bool: boolean) => {
-    return bool;
-  });
+  const { openPopup } = useContext(PopupContext);
   return (
     <div className="ContactHeader">
       <div className="loginLang">
         <div className="lang">
-          <MdKeyboardArrowDown
+          {/* <MdKeyboardArrowDown
             style={{
               alignSelf: "center",
               paddingLeft: "20px",
               fontSize: "23px",
             }}
-          />
-          <p
+          /> */}
+          <SelectLang />
+          {/* <p
             style={{
               alignSelf: "center",
             }}
           >
             Arabic
-          </p>
+          </p> */}
           <MdOutlineLanguage
             style={{ alignSelf: "center", fontSize: "25px" }}
           />
@@ -40,29 +41,26 @@ export default function ContactHeader() {
         />
         <div
           onClick={() => {
-            onRegiClick.current(true);
+            // onRegiClick.current(true);
+            openPopup(<SignInPopUp />);
           }}
           style={{
             cursor: "pointer",
             alignSelf: "center",
             // width: "220px",
+
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "center",
           }}
         >
-          <span
-            style={{
-              alignSelf: "center",
-              fontSize: "13px",
-            }}
-          >
-            نسجيل الدخول / نسجيل حساب جديد
-          </span>
-          <FaRegUser style={{ alignSelf: "center", fontSize: "20px" }} />
+          <span className="loginButton">نسجيل الدخول / نسجيل حساب جديد</span>
+          <FaRegUser
+            style={{ alignSelf: "center", fontSize: "20px", flex: 1 }}
+          />
         </div>
-        <SignInPopUp setShow={onRegiClick} />
+        {/* <SignInPopUp setShow={onRegiClick} /> */}
       </div>
-      <Link to="contactus">
+      <Link to="/contactus">
         <div className="contactInfo">
           <div
             style={{

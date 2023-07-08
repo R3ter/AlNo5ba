@@ -77,6 +77,7 @@ export default () => {
               <Avatar
                 style={{
                   width: "0px",
+                  height: "0px",
                   margin: "0px",
                 }}
                 src={image}

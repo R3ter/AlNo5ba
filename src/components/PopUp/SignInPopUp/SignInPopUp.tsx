@@ -5,16 +5,16 @@ import PopUp from "../PopUp";
 import "./style.scss";
 import isEmail from "validator/lib/isEmail";
 import MainButton from "../../MainButton/MainButton";
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
+import { PopupContext } from "../../Context/PopUpContext";
 
-export default ({ setShow }: { setShow: any }) => {
+export default () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const form = useRef({ email: "", password: "" });
-
+  const { closePopup } = useContext(PopupContext);
   return (
     <PopUp
-      setShow={setShow}
       form={<SignInForm formValue={form.current} error={error} />}
       submitButton={
         <MainButton
@@ -59,7 +59,7 @@ export default ({ setShow }: { setShow: any }) => {
               </P>
               <h4
                 onClick={() => {
-                  setShow.current(false);
+                  closePopup();
                   navigate("/register");
                 }}
                 style={{ alignSelf: "center", cursor: "pointer" }}

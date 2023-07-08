@@ -1,0 +1,27 @@
+.courseInfo {
+  display: flex;
+  margin: 1rem;
+  max-width: 1500px;
+  div {
+    margin: 10px;
+  }
+  @media only screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 0.5rem;
+    justify-content: center;
+    margin: auto;
+    .courseGallery {
+      align-self: center;
+      width: 80vw;
+    }
+  }
+}
+.coursePage {
+  text-align: center;
+  @media only screen and (max-width: 900px) {
+    h1 {
+      font-size: 0.9rem;
+    }
+  }
+}

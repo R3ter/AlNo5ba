@@ -7,9 +7,13 @@ import HomePage from "./pages/HomePage/HomePage";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import ScrollToTop from "./components/ScrollTop/ScrollTop";
+import TeacherPage from "./pages/TeacherProfilePage/TeacherPage";
+import { PopupProvider } from "./components/Context/PopUpContext";
+import PopUpWindow from "./components/PopUp/PopUpWindow/PopUpWindow";
 
 const AuthLayout = () => (
   <div>
+    <PopUpWindow />
     <ScrollToTop />
     <Outlet />
   </div>
@@ -42,6 +46,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <RegisterPage />,
       },
+      {
+        path: "/teacherProfile",
+        element: <TeacherPage />,
+      },
     ],
   },
 ]);
@@ -49,7 +57,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div id="app">
-      <RouterProvider router={router} />
+      <PopupProvider>
+        <RouterProvider router={router} />
+      </PopupProvider>
     </div>
   );
 }

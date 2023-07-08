@@ -2,6 +2,8 @@ import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/Io";
 import "./style.scss";
 import { PiStudentBold } from "react-icons/pi";
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import H1 from "../SimpleComponents/H1";
 
 export default () => {
   const parentRef = useRef<HTMLDivElement>(null);
@@ -124,8 +126,10 @@ interface ITeacherCard {
 }
 const TeacherCard = ({ image, name, studentsNum, style }: ITeacherCard) => (
   <div className="teacherCard" style={{ ...style }}>
-    <img src={image} />
-    <h2 style={{ margin: "0" }}>{name}</h2>
+    <Link to={"/teacherProfile"}>
+      <img src={image} />
+      <H1 style={{ margin: "0", fontSize: "17px" }}>{name}</H1>
+    </Link>
     <p style={{ margin: "0", display: "flex" }}>
       <PiStudentBold style={{ fontSize: "20px", alignSelf: "center" }} />
       <p>{studentsNum}</p>
