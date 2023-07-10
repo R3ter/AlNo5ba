@@ -23,9 +23,11 @@ export default ({
         value={formValue}
         text="البريد الالكتروني"
         type="email"
+        pushErrorMsg={error?.email}
         errorMsg="البريد الالكتروني غير صحيح"
         validate={(input) => {
-          return isEmail(input);
+          const valid = isEmail(input);
+          return valid;
         }}
       />
       <div

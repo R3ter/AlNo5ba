@@ -7,25 +7,32 @@ interface IProps {
   style?: CSSProperties;
   full?: boolean;
   isLoading?: boolean;
+  disable?: boolean;
 }
-export default ({ text, onClick, style, full = false }: IProps) => {
+export default ({
+  text,
+  onClick,
+  style,
+  full = false,
+  disable = false,
+}: IProps) => {
   const [isLoading, setLoading] = useState(false);
 
   return (
     <div>
       <button
         onClick={() => {
-          if (onClick && !isLoading) return onClick(setLoading);
+          if (onClick && !isLoading && !disable) return onClick(setLoading);
         }}
         style={{
           padding: "10px",
           whiteSpace: "nowrap",
           fontSize: "18px",
           paddingRight: "70px",
-          cursor: !isLoading ? "pointer" : "auto",
+          cursor: !isLoading && !disable ? "pointer" : "auto",
           paddingLeft: "70px",
           borderRadius: full ? "0px" : "10px",
-          backgroundColor: !isLoading ? "#253475" : "#5d637e",
+          backgroundColor: !isLoading && !disable ? "#253475" : "#5d637e",
           color: "white",
           border: "none",
           height: "50px",
