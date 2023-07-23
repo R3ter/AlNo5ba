@@ -10,8 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.17",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.0",
     "@react-google-maps/api": "^2.18.1",
     "@react-icons/all-files": "^4.1.0",
+    "graphql": "^16.7.1",
+    "material-ui-popup-state": "^5.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
@@ -21,6 +27,7 @@
     "react-spinners": "^0.13.8",
     "react-transition-group": "^4.4.5",
     "sass": "^1.63.6",
+    "universal-cookie": "^4.0.4",
     "validator": "^13.9.0"
   },
   "devDependencies": {

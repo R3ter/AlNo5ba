@@ -6,17 +6,18 @@ interface IProps {
   onClick?: (arg0: Function) => void;
   style?: CSSProperties;
   full?: boolean;
-  isLoading?: boolean;
+  loading?: boolean;
   disable?: boolean;
 }
 export default ({
   text,
   onClick,
   style,
+  loading = false,
   full = false,
   disable = false,
 }: IProps) => {
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(loading);
 
   return (
     <div>

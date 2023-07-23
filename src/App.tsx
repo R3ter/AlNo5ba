@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollTop/ScrollTop";
 import TeacherPage from "./pages/TeacherProfilePage/TeacherPage";
 import { PopupProvider } from "./components/Context/PopUpContext";
 import PopUpWindow from "./components/PopUp/PopUpWindow/PopUpWindow";
+import { getLoginCredentials } from "./func/Cookies";
 
 const AuthLayout = () => (
   <div>
@@ -21,6 +22,8 @@ const AuthLayout = () => (
 const router = createBrowserRouter([
   {
     element: <AuthLayout />,
+    loader: getLoginCredentials,
+    id: "root",
     children: [
       {
         path: "/",

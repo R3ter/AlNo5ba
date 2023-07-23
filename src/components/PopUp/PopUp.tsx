@@ -4,13 +4,11 @@ import { PopupContext } from "../Context/PopUpContext";
 export default ({
   form,
   title,
-  submitButton,
   extra,
 }: {
   form: React.ReactNode;
   title: string;
   extra?: React.ReactNode;
-  submitButton: React.ReactNode;
 }) => {
   const { closePopup } = useContext(PopupContext);
   return (
@@ -57,7 +55,6 @@ export default ({
         <h2 style={{ textAlign: "center", margin: "0px" }}>{title}</h2>
         {form}
         <br></br>
-        {submitButton}
         {extra}
       </div>
     </div>

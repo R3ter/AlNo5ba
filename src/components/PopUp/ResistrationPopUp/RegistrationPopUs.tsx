@@ -1,11 +1,9 @@
-import MainButton from "../../MainButton/MainButton";
 import RegistrationForm from "../../RegistrationForm.tsx/RegistrationForm";
 import P from "../../SimpleComponents/P";
 import PopUp from "../PopUp";
 
 export default () => (
   <PopUp
-    submitButton={<MainButton text={"dawwda"} />}
     form={<RegistrationForm />}
     title="تسجيل حساب جديد"
     extra={

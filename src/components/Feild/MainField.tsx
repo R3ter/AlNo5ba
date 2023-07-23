@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import { BiSolidErrorCircle } from "react-icons/bi";
 interface IFormValue {
   [key: string]: string;
@@ -12,10 +12,13 @@ export default ({
   keyForm,
   validate,
   pushErrorMsg,
+  style = {},
 }: {
   errorMsg?: string;
   keyForm?: string;
   value?: IFormValue;
+  style?: CSSProperties;
+
   text: string;
   pushErrorMsg?: string;
   validate?: (input: string) => boolean;
@@ -26,7 +29,7 @@ export default ({
     if (pushErrorMsg) setError(pushErrorMsg);
   }, [pushErrorMsg]);
   return (
-    <div style={{ direction: "rtl", width: "100%" }}>
+    <div style={{ direction: "rtl", width: "100%", ...style }}>
       <h3>{text}</h3>
       <input
         type={type}

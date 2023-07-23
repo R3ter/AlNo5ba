@@ -10,8 +10,10 @@
     display: flex;
     justify-content: space-between;
     width: 300px;
+    align-self: center;
     text-align: center;
     margin-right: 30px;
+    margin-left: 30px;
     @media only screen and (max-width: 900px) {
       display: none;
     }
@@ -38,6 +40,7 @@
   .loginButton {
     font-size: 13px;
     margin-right: 10px;
+    direction: rtl;
 
     @media only screen and (max-width: 900px) {
       font-size: 10px;
@@ -47,4 +50,8 @@
       white-space: nowrap;
     }
   }
+}
+.MuiMenu-root ul {
+  background-color: #322e49;
+  color: white;
 }

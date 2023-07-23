@@ -3,7 +3,7 @@ import "./style.scss";
 export default () => {
   return (
     <div className="studentsReviews">
-      <h2 style={{ color: "#273572" }}>اراء الطلاب</h2>
+      <h2 style={{ color: "#273572", fontSize: "30px" }}>اراء الطلاب</h2>
       <div>
         <p>
           خلافا للاعتقاد السائد فإن لوريم إيبسوم ليس نصا عشوائيا، بل إن له جذور

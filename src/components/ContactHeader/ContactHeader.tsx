@@ -3,32 +3,28 @@ import "./style.scss";
 import { TfiEmail, TfiMobile } from "react-icons/tfi";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineLanguage } from "react-icons/md";
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import SignInPopUp from "../PopUp/SignInPopUp/SignInPopUp";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useRouteLoaderData } from "react-router-dom";
 import SelectLang from "./SelectLang";
 import { PopupContext } from "../Context/PopUpContext";
+import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
+import { ListItemIcon, ListItemText, Menu, MenuItem } from "@mui/material";
+import { IoLogOutOutline } from "react-icons/io5";
 export default function ContactHeader() {
   const { openPopup } = useContext(PopupContext);
+  const navigate = useNavigate();
+  const login = useRouteLoaderData("root") as {
+    firstName: string;
+    lastName: string;
+  } | null;
+  console.log(login);
   return (
     <div className="ContactHeader">
       <div className="loginLang">
         <div className="lang">
-          {/* <MdKeyboardArrowDown
-            style={{
-              alignSelf: "center",
-              paddingLeft: "20px",
-              fontSize: "23px",
-            }}
-          /> */}
           <SelectLang />
-          {/* <p
-            style={{
-              alignSelf: "center",
-            }}
-          >
-            Arabic
-          </p> */}
+
           <MdOutlineLanguage
             style={{ alignSelf: "center", fontSize: "25px" }}
           />
@@ -39,26 +35,85 @@ export default function ContactHeader() {
             alignSelf: "center",
           }}
         />
-        <div
-          onClick={() => {
-            // onRegiClick.current(true);
-            openPopup(<SignInPopUp />);
-          }}
-          style={{
-            cursor: "pointer",
-            alignSelf: "center",
-            // width: "220px",
+        {!login ? (
+          <div
+            onClick={() => {
+              // onRegiClick.current(true);
+              openPopup(<SignInPopUp />);
+            }}
+            style={{
+              cursor: "pointer",
+              alignSelf: "center",
 
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <span className="loginButton">نسجيل الدخول / نسجيل حساب جديد</span>
-          <FaRegUser
-            style={{ alignSelf: "center", fontSize: "20px", flex: 1 }}
-          />
-        </div>
-        {/* <SignInPopUp setShow={onRegiClick} /> */}
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <span className="loginButton">نسجيل الدخول / نسجيل حساب جديد</span>
+            <FaRegUser
+              style={{ alignSelf: "center", fontSize: "20px", flex: 1 }}
+            />
+          </div>
+        ) : (
+          <div style={{ display: "flex" }}>
+            <PopupState variant="dialog" popupId="demo-popup-menu">
+              {(popupState) => (
+                <Fragment>
+                  <div
+                    style={{
+                      marginRight: "30px",
+                      display: "flex",
+                      direction: "rtl",
+                      cursor: "pointer",
+                      alignSelf: "center",
+                      alignContent: "center",
+                      justifyContent: "center",
+                    }}
+                    {...bindTrigger(popupState)}
+                  >
+                    <FaRegUser
+                      style={{ alignSelf: "center", marginLeft: "10px" }}
+                    />
+                    مرحبا : {login.firstName + " " + login.lastName}
+                  </div>
+                  <Menu {...bindMenu(popupState)}>
+                    <MenuItem
+                      onClick={() => {
+                        navigate("/profile");
+                        popupState.close();
+                      }}
+                    >
+                      <ListItemIcon>
+                        <FaRegUser
+                          style={{
+                            alignSelf: "center",
+                            fontSize: "20px",
+                            flex: 1,
+                            color: "#3b6fb2",
+                          }}
+                        />
+                      </ListItemIcon>
+                      <ListItemText style={{}}>Profile</ListItemText>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <ListItemIcon>
+                        <IoLogOutOutline
+                          style={{
+                            alignSelf: "center",
+                            fontSize: "25px",
+                            flex: 1,
+                            color: "#b23b3b",
+                          }}
+                        />
+                      </ListItemIcon>
+                      <ListItemText>Logout</ListItemText>
+                    </MenuItem>
+                  </Menu>
+                </Fragment>
+              )}
+            </PopupState>
+          </div>
+        )}
       </div>
       <Link to="/contactus">
         <div className="contactInfo">
